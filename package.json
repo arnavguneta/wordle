@@ -4,9 +4,33 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/api/app.js",
+    "dev": "env-cmd nodemon src/index.js -e js "
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "canvas": "^2.7.0",
+    "discord.js": "^13.6.0",
+    "discord.js-pagination": "^1.0.3",
+    "express": "^4.17.1",
+    "module-alias": "^2.2.2",
+    "mongoose": "^5.12.2",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "nodemon": "^2.0.6"
+  },
+  "_moduleAliases": {
+    "@root": "./src",
+    "@models": "./src/models",
+    "@utils": "./src/utils",
+    "@features": "./src/features/features",
+    "@commands": "./src/commands/commands",
+    "@db": "./src/db",
+    "@api": "./src/api"
+  }
 }
